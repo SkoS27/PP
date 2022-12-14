@@ -1,0 +1,25 @@
+[2;3;1];; (*Definicion comoda de lista*)
+List.length l;; (*longitud de la lista*)
+List.hd l ;;(*cabecera de lista*)
+List.tl l ;;(*cola de la lista*)
+List.rev l ;;(*lista invertida*)
+List.nth l 0 ;; (*posicion 0 de la lista dada*)
+List.map abs l;; (*pasar una lista como parametro de entrada de otra funcion, abs en este caso*)
+List.mem '1' l;; (*comprueba si el elemento entre comillas simples esta en la lista*)
+List.filter (function n -> n < 0) [1;2;-3;-5];; (*filtra los elementos que cumplen la condicion*)
+List.exists ((>) 0) l;; (*si existe elementos negativos o que cumplan 0 > n*)
+List.for_all ((>) 0) l;; (* se cumple la condicion para toda la lista*)
+List.find ((>) 0) l;; (* Busca elementos en la lista que cumplan esa condicion*)
+List.init 10 float  ;; (*nos permite inicializar una lista de 10 enteros y pasarlos por una funcion*)
+
+(*Funcion que devuelve el ultimo elemento de una lista*)
+
+let rec last l =
+  if List.tl l = [] then List.hd l
+  else last (List.tl l);;
+  
+(Funcion que devuelve el ultimo elemento de una lista*)
+
+
+ elemento :: lista (*constructor que añade el elemento a la lista de la cabeza, asocia por la derecha*)
+ 

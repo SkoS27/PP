@@ -1,0 +1,15 @@
+let rec quo x y = 
+    if x < y then 0
+    else 1 + quo (x-y) y;;
+(*quo 7 3;;= int = 2(7 entre 3) cociente 2 *)
+
+let rec rem x y =
+    if x < y then x
+    else rem (x-y) y;;
+    
+    
+let rec div x y = 
+    if x < y then 0, x
+    else 1+ fst (div (x-y) y), snd (div (x-y) y);;
+    
+

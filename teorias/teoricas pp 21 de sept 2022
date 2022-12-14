@@ -1,0 +1,16 @@
+match 2 < 0 with
+  true -> false
+  |false -> true
+  
+  (*- : bool = true*)
+  
+let id = function x -> x;;
+
+(*val id : 'a -> 'a = <fun>*)
+
+let doble = function x -> 2 * x;;
+(*val doble : int -> int = <fun>*)
+
+let doble x = 2 * x;;
+(*val doble : int -> int = <fun>*)
+

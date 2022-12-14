@@ -1,0 +1,6 @@
+let fact n =
+  let rec aux resultado=
+  0 -> resultado
+ |i -> aux (i*resultado) (i-1)
+ in
+  aux 1 n;;

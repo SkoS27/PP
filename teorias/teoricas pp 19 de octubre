@@ -1,0 +1,24 @@
+raise : exn -> 'a
+
+# raise Division_by_zero;;
+Exception: Division_by_zero.
+(*permite abortar la ejecucion en una definicion de funcion ejemplo:
+[] -> raise (failure "hd")*)
+
+[1;2;3] @ [4;5;6];;
+- : int list = [1; 2; 3; 4; 5; 6]
+
+let rec append = function
+  [] -> (function l -> l)
+ | h::t -> (function l ->h :: append t l);;
+(*funcion concatenar a mano (no terminal)*)
+
+match <e> with
+  <p1> -> <e1>
+  <p2> -> <e2>
+  .....
+  
+  
+let rec append l1 l2 = match l1 with
+  [] -> l2
+ | h::t -> h :: append t l2;;
