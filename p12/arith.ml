@@ -18,9 +18,17 @@ type arith =
 let rec eval ctx = function
     Float f ->
       f
-
   | Var name ->
       get_binding ctx name
-
-  | ... ;;
+  | Arith_op (Opp, x) -> 
+  	0.0 -. eval ctx x
+  | Arith_bi_op (o,x,y)->
+  	(match o with
+  	Sum->eval ctx x +. eval ctx y
+  	|Sub->eval ctx x -. eval ctx y
+  	|Prod->eval ctx x *. eval ctx y
+  	|Div->eval ctx x /. eval ctx y
+  	|Mod->mod_float (eval ctx x) (eval ctx y)
+  	|Pow->eval ctx x ** eval ctx y)
+  | Fun_call (o,x) -> (get_function o) (eval ctx x );;
 
