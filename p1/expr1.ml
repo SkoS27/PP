@@ -22,11 +22,11 @@ Error: error de tipos debido a que la resta esperaba tipos int*)
 Error: sqrt es una funcion a la que le tenemos que dar un dato float no int*)
 int_of_float 2.1 + truncate (2.9);;
 (* - : int = 4*)
-truncate 2.1 + truncate ( -2.9 ) ; ;
+truncate 2.1 + truncate ( -2.9 );; (* truncate trunca el entero*)
 (* - : int = 0*)
-floor 2.1 +. floor ( -2.9 ) ; ;
+floor 2.1 +. floor ( -2.9 ) ;; (*redondea a la baja*)
 (* - : float = -1 *)
-ceil 2.1 +. ceil -2.9 ;;
+ceil 2.1 +. ceil -2.9 ;; (*redondea hacia arriba*)
 (*Error: error de tipo debido al signo -*)
 (*2.0 ** ** 3.0 2.0 ;;
 Error: error de sintaxis debido a dos ** consecutivos*)
@@ -46,7 +46,7 @@ Char.chr ( Char.code 'a' - Char.code 'A' + Char.code 'M' ) ;;
 (*- : char = 'm'*)
 "this is a string" ;;
 (*- : string = "this is a string"*)
-String . length " longitud " ;;
+String . length "longitud" ;;
 (*- : int = 10*)
 (*" 1999 " + " 1 " ;;
 Error: This expression has type string but an expression was expected of type int*)
