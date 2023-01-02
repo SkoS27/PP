@@ -12,7 +12,7 @@ let rec num_cifras n =
   
 let rec exp10 n =
  if n = 0 then 1
- else 10 *(int_of_float(10. ** float_of_int(n-1)))
+ else 10 *(exp10(n-1))
  
 let rec reverse n =
     if (n >= 0 && n < 10) then n
