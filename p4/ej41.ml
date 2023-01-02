@@ -21,4 +21,4 @@ let rec reverse n =
 
 let rec palindromo s =
   if String.length s = 1 then true
-  else (s.[0] == s.[(String.length s)-1]);;
+  else ((s.[0] == s.[(String.length s)-1]) && );;
